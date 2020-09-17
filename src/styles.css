@@ -1,0 +1,105 @@
+html {
+    --bg: #2f3542;
+    --sub-text-color: #797979;
+}
+html {
+    background: var(--bg);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+canvas {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+#paper-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-image: url("https://gridbyexample.com/img/tiny_grid.png");
+}
+#paper {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border: 1px solid #333;
+}
+:root {
+    --controls-padding: .2em;
+    --arms-control-panel-width: 300px;
+}
+/* CONTROL */
+#arms-control-panel {
+    padding: var(--controls-padding);
+    height: calc(100vh - 4 * var(--controls-padding) - 29px);
+    width: var(--arms-control-panel-width);
+    overflow-y: auto;
+}
+.controls {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: var(--controls-padding);
+    margin-bottom: var(--controls-padding);
+    transition: all 0.3s;
+}
+.control {
+    display: flex;
+}
+.control input, .control label {
+    display: flex;
+    flex: 1;
+    width: 50%;
+    margin: var(--controls-padding);
+    align-items: center;
+}
+.control label {
+    font-size: .8rem;
+    text-transform: capitalize;
+    color: var(--sub-text-color);
+}
+.controls:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+/* PAPER */
+#paper {
+    position: relative;
+    height: calc(100vh - (2 * var(--controls-padding)) - 14px);
+    width: calc(100vw - var(--arms-control-panel-width) - (2 * var(--controls-padding)));
+    border: 1px solid rgb(84 84 84);
+    margin: var(--controls-padding);
+}
+/* BUTTONS */
+#btn-panel {
+    display: flex;
+    padding: var(--controls-padding);
+}
+.btn {
+    color: #fff;
+    background-color: #337ab7;
+    border: none;
+    padding: 0 .5em;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 0 .1em;
+    outline: none;
+    flex: 1;
+}
+.btn:first-child {
+    margin-left: 0;
+}
+.btn:last-child {
+    margin-right: 0;
+}
+.draw-btn-active {
+    background: #338fb7;
+}
+    
